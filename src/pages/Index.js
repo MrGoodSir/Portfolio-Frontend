@@ -11,7 +11,7 @@ function Index(props) {
 
   const loaded = () => {
     return props.projects.map((project) => (
-      <div key={project._id} className="project">
+      <div key={project._id} className="projectsList">
         <Link to={project.URL}>
           <h1>{project.name}</h1>
         </Link>
@@ -28,7 +28,10 @@ function Index(props) {
 
   return (
     <section>
-      {props.projects ? loaded() : loading()}
+      <h1 className="indexH1">My Projects</h1>
+      <div className="projectCard">
+        {props.projects ? loaded() : loading()}
+      </div>
     </section>
   );
 }

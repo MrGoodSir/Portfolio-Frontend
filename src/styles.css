@@ -1,0 +1,59 @@
+/* ///////////////////////////////
+// Nav Bar
+//////////////////////////////// */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(0, 0, 0, .2);  
+}
+
+.navButtonSpot {
+    padding: 20px;
+}
+
+.navLink {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.navButton {
+    padding: 10px;
+    background-color: rgb(0, 0, 0, .5);
+    border-radius: 10px;
+}
+
+.navButton:hover {
+    background-color: rgba(51, 75, 206, 0.5);
+}
+
+/* ///////////////////////////////
+// Home Page
+//////////////////////////////// */
+
+
+/* ///////////////////////////////
+// About Page
+//////////////////////////////// */
+
+/* ///////////////////////////////
+// Projects Page
+//////////////////////////////// */
+
+img {
+    max-width: 1200px;
+}
+
+.indexH1 {
+    font-size: 50px;
+}
+
+.projectCard {
+    background-color: rgb(0, 0, 0, .2);
+}
+
+
+
+/* ///////////////////////////////
+// Contact Page
+//////////////////////////////// */
