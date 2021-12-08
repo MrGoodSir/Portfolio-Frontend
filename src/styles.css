@@ -5,7 +5,11 @@
 .nav {
     display: flex;
     justify-content: space-between;
-    background-color: rgb(0, 0, 0, .2);  
+}
+
+.navBarRight {
+    display: flex;
+    justify-content: space-between;
 }
 
 .navButtonSpot {
@@ -19,18 +23,49 @@
 
 .navButton {
     padding: 10px;
-    background-color: rgb(0, 0, 0, .5);
     border-radius: 10px;
+    color: rgb(82, 82, 82);
 }
 
 .navButton:hover {
-    background-color: rgba(51, 75, 206, 0.5);
+    background-color: rgba(13, 30, 128, 0.5);
 }
 
 /* ///////////////////////////////
 // Home Page
 //////////////////////////////// */
 
+.homeH1 {
+    font-size: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.homeHey {
+    color: rgb(82, 82, 82);
+}
+
+.profilePicture {
+    max-height: 800px;
+    border-radius: 5px;
+}
+
+html {
+    min-width: 100%;
+}
+
+.homePageBody {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(0, 0, 0, .05);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.homePageRight {
+    font-size: 25px;
+}
 
 /* ///////////////////////////////
 // About Page

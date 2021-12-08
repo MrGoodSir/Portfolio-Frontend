@@ -2,39 +2,45 @@ import { Link } from "react-router-dom";
 
 function Header(props) {
   return (
-    <nav className="nav">
-      <div className="navButtonSpot">
-        <Link className="navLink" to="/">
-          <div className="navButton">
-            <div>Home</div>
-          </div>
-        </Link>
-      </div>
+    <body className="nav">
+        <nav className="navBarLeft">
+          <h1>placeholder</h1>
+        </nav>
 
-      <div className="navButtonSpot">
-        <Link className="navLink" to="/projects">
-          <div className="navButton">
-            <div>Projects</div>
+        <nav className="navBarRight">
+          <div className="navButtonSpot">
+            <Link className="navLink" to="/">
+              <div className="navButton">
+                <div>Home</div>
+              </div>
+            </Link>
           </div>
-        </Link>
-      </div>
 
-      <div className="navButtonSpot">
-        <Link className="navLink" to="/about">
-          <div className="navButton">
-            <div>About</div>
+          <div className="navButtonSpot">
+            <Link className="navLink" to="/projects">
+              <div className="navButton">
+                <div>Projects</div>
+              </div>
+            </Link>
           </div>
-        </Link>
-      </div>
 
-      <div className="navButtonSpot">
-        <Link className="navLink" to="/contact">
-          <div className="navButton">
-            <div>Contact</div>
+          <div className="navButtonSpot">
+            <Link className="navLink" to="/about">
+              <div className="navButton">
+                <div>About</div>
+              </div>
+            </Link>
           </div>
-        </Link>
-      </div>
-    </nav>
+
+          <div className="navButtonSpot">
+            <Link className="navLink" to="/contact">
+              <div className="navButton">
+                <div>Contact</div>
+              </div>
+            </Link>
+          </div>
+        </nav>
+    </body>
   );
 }
 
