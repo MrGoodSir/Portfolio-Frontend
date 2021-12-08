@@ -23,7 +23,7 @@ function Main(props) {
     <main>
       <Switch>
         <Route exact path="/">
-            <Home />
+          <Home />
         </Route>
         <Route exact path="/projects">
           <Index projects={projects} />

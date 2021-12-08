@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 function Header(props) {
   return (
     <body className="nav">
+      <section className="navBar">
         <nav className="navBarLeft">
           <h1>placeholder</h1>
         </nav>
@@ -40,6 +41,7 @@ function Header(props) {
             </Link>
           </div>
         </nav>
+      </section>
     </body>
   );
 }
