@@ -9,24 +9,6 @@ function Index(props) {
     URL: "",
   });
 
-  const handleChange = (event) => {
-    setNewForm((prevState) => ({
-      ...prevState,
-      [event.target.name]: event.target.value,
-    }));
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    props.createProjects(newForm);
-    setNewForm({
-      name: "",
-      image: "",
-      description: "",
-      URL: "",
-    });
-  };
-
   const loaded = () => {
     return props.projects.map((project) => (
       <div key={project._id} className="project">
@@ -46,37 +28,6 @@ function Index(props) {
 
   return (
     <section>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={newForm.name}
-          name="name"
-          placeholder="name"
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          value={newForm.image}
-          name="image"
-          placeholder="image URL"
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          value={newForm.description}
-          name="description"
-          placeholder="Description"
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          value={newForm.URL}
-          name="URL"
-          placeholder="URL"
-          onChange={handleChange}
-        />
-        <input type="submit" value="Create Project.... -.-" />
-      </form>
       {props.projects ? loaded() : loading()}
     </section>
   );
