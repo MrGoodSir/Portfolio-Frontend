@@ -5,11 +5,13 @@ import Bottom from "./components/Bottom";
 
 function App() {
   return (
+    <html className="appHTML">
       <div className="App">
         <Header />
         <Main />
         <Bottom />
       </div>
+    </html>
   );
 }
 

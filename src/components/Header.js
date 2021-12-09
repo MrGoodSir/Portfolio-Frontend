@@ -5,7 +5,7 @@ function Header(props) {
     <body className="nav">
       <section className="navBar">
         <nav className="navBarLeft">
-          <h1>placeholder</h1>
+        <img className="logoIcon" src="/images/logo.jpg" alt=""/>
         </nav>
 
         <nav className="navBarRight">
