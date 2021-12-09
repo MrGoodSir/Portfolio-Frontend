@@ -1,13 +1,6 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 
 function Index(props) {
-  const [newForm, setNewForm] = useState({
-    name: "",
-    image: "",
-    description: "",
-    URL: "",
-  });
 
   const loaded = () => {
     return props.projects.map((project) => (
