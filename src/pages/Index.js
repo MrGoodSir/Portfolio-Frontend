@@ -21,14 +21,12 @@ function Index(props) {
     ));
   };
 
-  const loading = () => {
-    return <h1>Loading Projects...</h1>;
-  };
+
 
   return (
     <section className="indexSection">
       <h1 className="indexH1">My Projects</h1>
-      {props.projects}
+      {loaded}
     </section>
   );
 }
