@@ -9,7 +9,7 @@ function Main() {
 
   const [projects, setProjects] = useState(null);
 
-  const URL = "https://danielhill-portfolio.netlify.app/projects/";
+  const URL = "https://backend-portfoliop.herokuapp.com/projects";
 
   const getProjects = async () => {
     const response = await fetch(URL);
