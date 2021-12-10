@@ -28,7 +28,7 @@ function Index(props) {
   return (
     <section className="indexSection">
       <h1 className="indexH1">My Projects</h1>
-      {props.projects ? loaded() : loading()}
+      {props.projects}
     </section>
   );
 }
