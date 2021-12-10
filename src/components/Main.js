@@ -9,7 +9,7 @@ function Main(props) {
 
   const [projects, setProjects] = useState(null);
 
-  const URL = "http://localhost:3001/projects/";
+  const URL = "https://danielhill-portfolio.netlify.app//projects/";
 
   const getProjects = async () => {
     const response = await fetch(URL);
