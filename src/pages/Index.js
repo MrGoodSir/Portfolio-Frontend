@@ -12,7 +12,7 @@ function Index(props) {
               <h3>{project.description}</h3>
             </div>
             <div className="projectListRightBottom">
-              <a className="projectLink" href={project.URL} target="_blank">
+              <a className="projectLink" href={project.URL} target="_blank" rel="noreferrer">
                 Check it out
               </a>
             </div>
