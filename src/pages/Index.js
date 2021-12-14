@@ -12,8 +12,11 @@ function Index(props) {
               <h3>{project.description}</h3>
             </div>
             <div className="projectListRightBottom">
+              <a className="projectRepoLink" href={project.gitHubURL} target="_blank" rel="nonreferrer">
+                Check out the Github Repo
+              </a>
               <a className="projectLink" href={project.URL} target="_blank" rel="noreferrer">
-                Check it out
+                Check out the site!
               </a>
             </div>
           </div>
