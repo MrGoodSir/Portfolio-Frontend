@@ -6,9 +6,7 @@ body, html {
 
 html {
     background-size: cover;
-    min-height: 100%;
-    min-width: 1024px;
-    width: 100%;
+    width: auto;
     height: auto;
     top: 0;
     left: 0;
@@ -18,7 +16,6 @@ html {
     padding: 10px;
     width: 71px;
 }
-
 
 /* ///////////////////////////////
 // Nav Bar
@@ -43,23 +40,50 @@ html {
     justify-content: space-between;
 }
 
-.navButtonSpot {
-    padding: 20px;
+.navMenu {
+    display: flex;
+    padding: 14px;
+    list-style-type: none;
+    gap: 40px;
 }
 
 .navLink {
     text-decoration: none;
-    color: rgb(0, 0, 0);
-}
-
-.navButton {
+    border: none;
+    color: #fff;
     padding: 10px;
-    border-radius: 10px;
-    color: rgb(0, 0, 0);
+    font-size: 16px;
+    border-radius: 5px;
+    position: relative;
+    box-sizing: border-box;
+    transition: all 500ms ease; 
 }
 
-.navButton:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+.navLink:hover {
+    background: rgba(38, 0, 255, 0.835);
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 5px 15px rgba(0, 17, 255, 0.904);
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transform: all 0.3s ease-in-out;
+    transform: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+@media(max-width:550px) {
+    .navMenu {
+        gap:0
+    }
 }
 
 /* ///////////////////////////////
@@ -116,6 +140,15 @@ html {
     border-radius: 10px;
     border: 2px solid rgba(71, 44, 230, 0.8);
     padding: 15px;
+    transition: all 200ms ease-in-out;
+}
+
+.homePageProjectsLink:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+    border: 2px solid black;
+    color: black;
+    padding: 15px;
+    border-radius: 10px;
 }
 
 .homePageContactLink {
@@ -124,16 +157,11 @@ html {
     border-radius: 10px;
     border: 2px solid rgba(71, 44, 230, 0.8);
     padding: 15px;
+    transition: all 200ms ease-in-out;
 }
 
 .homePageContactLink:hover {
-    border: 2px solid black;
-    color: black;
-    padding: 15px;
-    border-radius: 10px;
-}
-
-.homePageProjectsLink:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
     border: 2px solid black;
     color: black;
     padding: 15px;
@@ -150,7 +178,7 @@ html {
 }
 
 .homePageBody {
-    height: 100vh;
+    padding-top: 100px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -162,9 +190,18 @@ html {
     max-width: 600px;
 }
 
-@keyframes slideIn {
+@media only screen and (max-width: 1200px) {
+    .homePageBody {
+        display: flex;
+        flex-direction: column;
+    }
+    .profilePicture {
+        max-height: 500px;
+    }
+
 
 }
+
 
 /* ///////////////////////////////
 // About Page
@@ -175,7 +212,7 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    height: 80vh;
+    height: 100vh;
     display: flex;
     justify-content: space-around;
     padding: 40px;
@@ -188,15 +225,42 @@ html {
 
 .aboutMeLeftHalf {
     font-size: 25px;
-    width: 500px;
+    max-height: 70%;
+    max-width: 30%;
     background-color: rgb(82, 82, 82, .2);
     border-radius: 15px;
     padding: 0px 25px;
 }
 
 .aboutMePicture {
-    max-height: 700px;
+    max-height: 70%;
+    max-width: 60%;
     border-radius: 500px;
+}
+
+@media only screen and (max-width: 1400px) {
+    .aboutMeLeftHalf {
+        font-size: 20px;
+        background-color: rgba(170, 170, 170, 0.9);
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .aboutMePicture {
+        margin: 5px auto;
+    }
+
+    .aboutMeSection {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 1800px) {
+    .aboutMeLeftHalf {
+        font-size: 20px;
+    }
 }
 
 /* ///////////////////////////////
@@ -208,8 +272,8 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    padding: 40px;
     border-radius: 10px;
+    text-align: center;
 }
 
 img {
@@ -231,12 +295,37 @@ img {
 }
 
 .projectListRight {
+    text-align: center;
+}
+
+.projectListRightBottom {
     display: flex;
     flex-direction: column;
-    align-content: flex-end;
-    justify-content: space-around;
-    text-align: center;
-    max-width: 35%;
+    padding: 15px;
+}
+
+.indexButton {
+    padding: 20px;
+}
+
+.projectRepoLink {
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    background-color: rgb(82, 82, 82, .3);
+    padding: 15px;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.projectRepoLink:hover {
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    background-color: rgb(82, 82, 82, .5);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(85, 85, 85, 0.4);
 }
 
 .projectLink {
@@ -246,6 +335,7 @@ img {
     background-color: rgb(82, 82, 82, .3);
     padding: 15px;
     border-radius: 10px;
+    transition: all 0.2s ease-in-out;
 }
 
 .projectLink:hover {
@@ -255,12 +345,52 @@ img {
     background-color: rgb(82, 82, 82, .5);
     padding: 15px;
     border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(85, 85, 85, 0.4);
+}
+
+.projectListRight {
+    text-align: center;
+}
+
+@media only screen and (max-width: 1510px) {
+
+    .projectListRightTop {
+        font-size: 15px;
+    }
+    
+    .projectRepoLink {
+        font-size: 15px;
+    }
+
+    .projectLink {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    img {
+        width: 90%;
+    }
+    .projectList {
+        width: 87%;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 
 
+@media only screen and (max-width: 900px) {
+    img {
+        width: 90%
+    }
 
-
+    .projectList {
+        width: 87%;
+        display: flex;
+        flex-direction: column;
+    }
+}
 
 
 /* ///////////////////////////////
@@ -277,7 +407,7 @@ img {
 }
 
 .contactMeIcon {
-    width: 300px;
+    width: 15%;
     padding: 25px;
 }
 

@@ -1,45 +1,36 @@
-import { Link } from "react-router-dom";
-
 function Header(props) {
+
   return (
     <body className="nav">
       <section className="navBar">
         <nav className="navBarLeft">
-        <img className="logoIcon" src="/images/logo.jpg" alt=""/>
+          <a href="/">
+            <img className="logoIcon" src="/images/logo.jpg" alt="" />
+          </a>
         </nav>
-
         <nav className="navBarRight">
-          <div className="navButtonSpot">
-            <Link className="navLink" to="/">
-              <div className="navButton">
-                <div>Home</div>
-              </div>
-            </Link>
-          </div>
-
-          <div className="navButtonSpot">
-            <Link className="navLink" to="/projects">
-              <div className="navButton">
-                <div>Projects</div>
-              </div>
-            </Link>
-          </div>
-
-          <div className="navButtonSpot">
-            <Link className="navLink" to="/about">
-              <div className="navButton">
-                <div>About</div>
-              </div>
-            </Link>
-          </div>
-
-          <div className="navButtonSpot">
-            <Link className="navLink" to="/contact">
-              <div className="navButton">
-                <div>Contact</div>
-              </div>
-            </Link>
-          </div>
+          <ul className="navMenu">
+            <li className="navItem glowButton">
+              <a href="/" className="navLink">
+                Home
+              </a>
+            </li>
+            <li className="navItem glowButton">
+              <a href="/projects" className="navLink">
+                Projects
+              </a>
+            </li>
+            <li className="navItem glowButton">
+              <a href="/about" className="navLink">
+                About
+              </a>
+            </li>
+            <li className="navItem glowButton">
+              <a href="/contact" className="navLink">
+                Contact
+              </a>
+            </li>
+          </ul>
         </nav>
       </section>
     </body>

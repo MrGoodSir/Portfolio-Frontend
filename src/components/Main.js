@@ -6,10 +6,9 @@ import Contact from "../pages/Contact";
 import Home from "../pages/Home";
 
 function Main() {
-
   const [projects, setProjects] = useState(null);
 
-  const URL = "https://backend-portfoliop.herokuapp.com/projects";
+  const URL = "http://localhost:3001/projects";
 
   const getProjects = async () => {
     const response = await fetch(URL);
@@ -20,7 +19,7 @@ function Main() {
   useEffect(() => getProjects(), []);
 
   return (
-    <main>
+    <main className="main">
       <Switch>
         <Route exact path="/">
           <Home />

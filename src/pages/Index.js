@@ -1,26 +1,39 @@
 function Index(props) {
-
   const loaded = () => {
     return props.projects.map((project) => (
-        <div key={project._id} className="projectList">
-          <div className="projectListLeft">
-            <img src={project.image} alt={project.name} />
+      <div key={project._id} className="projectList">
+        <div className="projectListLeft">
+          <img src={project.image} alt={project.name} />
+        </div>
+        <div className="projectListRight">
+          <div className="projectListRightTop">
+            <h1>{project.name}</h1>
+            <h3>{project.description}</h3>
           </div>
-          <div className="projectListRight">
-            <div className="projectListRightTop">
-              <h1>{project.name}</h1>
-              <h3>{project.description}</h3>
-            </div>
-            <div className="projectListRightBottom">
-              <a className="projectRepoLink" href={project.gitHubURL} target="_blank" rel="nonreferrer">
-                Check out the Github Repo
+          <div className="projectListRightBottom">
+            <div className="indexButton">
+              <a
+                className="projectRepoLink"
+                href={project.gitHubURL}
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub Repo
               </a>
-              <a className="projectLink" href={project.URL} target="_blank" rel="noreferrer">
-                Check out the site!
+            </div>
+            <div className="indexButton">
+              <a
+                className="projectLink"
+                href={project.URL}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Project Site
               </a>
             </div>
           </div>
         </div>
+      </div>
     ));
   };
 
