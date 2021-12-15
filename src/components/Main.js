@@ -8,7 +8,7 @@ import Home from "../pages/Home";
 function Main() {
   const [projects, setProjects] = useState(null);
 
-  const URL = "http://localhost:3001/projects";
+  const URL = "https://backend-portfolioapp.herokuapp.com/projects";
 
   const getProjects = async () => {
     const response = await fetch(URL);
