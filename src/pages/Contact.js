@@ -10,7 +10,9 @@ function Contact() {
       <a href="https://www.linkedin.com/in/daniel-hill-242152217/" target="_blank" rel="noreferrer">
         <img className="contactMeIcon" src="/images/linkedin.png" alt="" />
       </a>
-      <h1>Email : daniel.s.hill01@gmail.com</h1>
+      <a href="mailto:daniel.s.hill01@gmail.com" target="_blank" rel="noreferrer">
+        <img className="contactMeIcon" src="/images/gmail.png" alt="" />
+      </a>
       <h1>
         Lets keep this simple. Pick your prefered way of contact, and lets talk!
       </h1>

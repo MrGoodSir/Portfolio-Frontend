@@ -287,9 +287,10 @@ img {
 }
 
 .projectList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px;
     background-color: rgba(224, 224, 224, 0.9);
-    display: flex;
-    justify-content: space-between;
     padding: 50px;
     margin: 20px;
     border-radius: 10px;
@@ -319,14 +320,14 @@ img {
     transition: all 0.2s ease-in-out;
 }
 
-.projectRepoLink:hover {
+.projectButton:hover {
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 30px;
-    background-color: rgb(82, 82, 82, .5);
+    background: rgba(38, 0, 255, 0.835);
     padding: 15px;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(85, 85, 85, 0.4);
+    box-shadow: 0 5px 15px rgba(0, 17, 255, 0.904);
 }
 
 .projectLink {
@@ -339,15 +340,9 @@ img {
     transition: all 0.2s ease-in-out;
 }
 
-.projectLink:hover {
-    text-decoration: none;
-    color: black;
-    font-size: 30px;
-    background-color: rgb(82, 82, 82, .5);
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(85, 85, 85, 0.4);
+.indexDescription {
 }
+
 
 .projectListRight {
     text-align: center;

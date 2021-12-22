@@ -7,13 +7,13 @@ function Index(props) {
         </div>
         <div className="projectListRight">
           <div className="projectListRightTop">
-            <h1>{project.name}</h1>
-            <h3>{project.description}</h3>
+            <h1 style={{fontSize: "45px"}}>{project.name}</h1>
+            <h3 className="indexDescription">{project.description}</h3>
           </div>
           <div className="projectListRightBottom">
             <div className="indexButton">
               <a
-                className="projectRepoLink"
+                className="projectRepoLink projectButton"
                 href={project.gitHubURL}
                 target="_blank"
                 rel="noreferrer"
@@ -23,7 +23,7 @@ function Index(props) {
             </div>
             <div className="indexButton">
               <a
-                className="projectLink"
+                className="projectLink projectButton"
                 href={project.URL}
                 target="_blank"
                 rel="noreferrer"
