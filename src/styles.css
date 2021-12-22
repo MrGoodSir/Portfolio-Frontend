@@ -274,6 +274,7 @@ html {
     background-attachment: fixed;
     border-radius: 10px;
     text-align: center;
+    padding: 50px 0px;
 }
 
 img {
@@ -281,7 +282,6 @@ img {
 }
 
 .indexH1 {
-    padding-top: 125px;
     font-size: 70px;
     text-align: center;
 }
@@ -395,15 +395,35 @@ img {
 
 .contactPageSection {
     margin-top: 80px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
     background-image: url("https://miro.medium.com/max/7000/0*h3XuL4wY_mP329hQ");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    height: 91vh;
+    height: 91vh
+}
+
+.contactPageIcons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 100px;
 }
 
 .contactMeIcon {
-    width: 15%;
+    width: 78%;
     padding: 25px;
+    margin: 15px;
+}
+
+.contactMeIcon:hover {
+    width: 83%;
+}
+
+.contactFlexContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
